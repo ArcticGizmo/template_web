@@ -1,30 +1,19 @@
 {
-  "nativescript": {
-    "id": "org.nativescript.beemonative",
-    "tns-android": {
-      "version": "6.5.0"
-    },
-    "tns-ios": {
-      "version": "6.5.0"
-    }
-  },
   "description": "NativeScript Application",
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "dependencies": {
+    "@nativescript/core": "~8.1.1",
     "@nativescript/theme": "~2.3.0",
-    "nativescript-vue": "~2.4.0",
-    "tns-core-modules": "~6.5.0"
+    "nativescript-vue": "~2.9.0"
   },
   "devDependencies": {
-    "@babel/core": "~7.1.0",
-    "@babel/preset-env": "~7.1.0",
-    "babel-loader": "~8.0.0",
-    "nativescript-dev-webpack": "~1.5.0",
-    "nativescript-vue-template-compiler": "~2.4.0",
-    "node-sass": "^4.7.1",
-    "vue-loader": "~15.4.0"
+    "@nativescript/android": "8.1.1",
+    "@nativescript/webpack": "~5.0.0",
+    "nativescript-vue-template-compiler": "~2.9.0",
+    "sass": "~1.39.0"
   },
   "gitHead": "20a65d338ae8f8911087ab6615b89363f864b07b",
-  "readme": "NativeScript Application"
+  "readme": "NativeScript Application",
+  "main": "./app/app.js"
 }
