@@ -1,22 +1,22 @@
-defmodule TplateWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :tplate
+defmodule TplateModuleWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :teplate_app
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_tplate_key",
+    key: "_teplate_app_key",
     signing_salt: "YRWfXbga"
   ]
 
-  socket "/socket", TplateWeb.UserSocket,
+  socket "/socket", TplateModuleWeb.UserSocket,
     websocket: true,
     longpoll: false
 
   plug Plug.Static,
     at: "/",
-    from: :tplate,
+    from: :teplate_app,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -46,5 +46,5 @@ defmodule TplateWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug TplateWeb.Router
+  plug TplateModuleWeb.Router
 end

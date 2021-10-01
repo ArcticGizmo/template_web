@@ -1,5 +1,5 @@
-defmodule TplateWeb.ErrorView do
-  use TplateWeb, :view
+defmodule TplateModuleWeb.ErrorView do
+  use TplateModuleWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

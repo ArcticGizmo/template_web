@@ -1,12 +1,12 @@
-defmodule TplateWeb do
+defmodule TplateModuleWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use TplateWeb, :controller
-      use TplateWeb, :view
+      use TplateModuleWeb, :controller
+      use TplateModuleWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,20 +19,20 @@ defmodule TplateWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: TplateWeb
+      use Phoenix.Controller, namespace: TplateModuleWeb
 
       import Plug.Conn
-      import TplateWeb.Helper
-      import TplateWeb.Gettext
-      alias TplateWeb.Router.Helpers, as: Routes
+      import TplateModuleWeb.Helper
+      import TplateModuleWeb.Gettext
+      alias TplateModuleWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/tplate_web/templates",
-        namespace: TplateWeb
+        root: "lib/teplate_app_web/templates",
+        namespace: TplateModuleWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -55,7 +55,7 @@ defmodule TplateWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import TplateWeb.Gettext
+      import TplateModuleWeb.Gettext
     end
   end
 
@@ -64,9 +64,9 @@ defmodule TplateWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import TplateWeb.ErrorHelpers
-      import TplateWeb.Gettext
-      alias TplateWeb.Router.Helpers, as: Routes
+      import TplateModuleWeb.ErrorHelpers
+      import TplateModuleWeb.Gettext
+      alias TplateModuleWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -78,7 +78,7 @@ defmodule TplateWeb do
   end
 end
 
-defmodule TplateWeb.Helper do
+defmodule TplateModuleWeb.Helper do
   def respond(conn), do: Plug.Conn.send_resp(conn)
 
   def respond(conn, code, data) when is_binary(data) do

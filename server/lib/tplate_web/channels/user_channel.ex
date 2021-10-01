@@ -1,4 +1,4 @@
-defmodule TplateWeb.UserChannel do
+defmodule TplateModuleWeb.UserChannel do
   @moduledoc false
 
   @room "user:all"

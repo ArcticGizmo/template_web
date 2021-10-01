@@ -1,4 +1,4 @@
-defmodule TplateWeb.ErrorHelpers do
+defmodule TplateModuleWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -25,9 +25,9 @@ defmodule TplateWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(TplateWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(TplateModuleWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(TplateWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(TplateModuleWeb.Gettext, "errors", msg, opts)
     end
   end
 end

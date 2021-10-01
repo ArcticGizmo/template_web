@@ -1,9 +1,9 @@
-defmodule Tplate.MixProject do
+defmodule TplateModule.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :tplate,
+      app: :teplate_app,
       version: "0.1.0",
       elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -16,7 +16,7 @@ defmodule Tplate.MixProject do
 
   def application do
     [
-      mod: {Tplate.Application, []},
+      mod: {TplateModule.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -27,7 +27,7 @@ defmodule Tplate.MixProject do
 
   defp deps do
     [
-      {:phoenix, "~> 1.5.3"},
+      {:phoenix, "~> 1.5.13"},
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},

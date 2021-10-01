@@ -1,7 +1,7 @@
-defmodule TplateWeb.UserSocket do
+defmodule TplateModuleWeb.UserSocket do
   use Phoenix.Socket
 
-  channel("user:all", TplateWeb.UserChannel)
+  channel("user:all", TplateModuleWeb.UserChannel)
 
   @impl true
   def connect(_params, socket, _connect_info) do
